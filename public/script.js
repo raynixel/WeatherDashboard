@@ -11,6 +11,12 @@ async function getWeather() {
     // Call backend API
     const response = await fetch(`/api/weather/${city}`);
     const data = await response.json();
+
+    // If there's an error (e.g., city not found), display the error message
+    if (data.error) {
+    document.getElementById("weatherResult").innerHTML = 
+        `<p class="text-red-500">${data.error}</p>`;
+    return;
     
     // This part displays the weather data dynamically
     document.getElementById("weatherResult").innerHTML = `
