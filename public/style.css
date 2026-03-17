@@ -1,4 +1,7 @@
-﻿body {
+﻿/* This file was used initially for simply styling the weather app and to test its functionality.
+It is no longer used as we are using Tailwind CSS for styling. */
+
+body {
     font-family: Arial;
     text-align: center;
     padding: 40px;

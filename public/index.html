@@ -4,25 +4,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Weather Dashboard</title>
-
+<!-- We are using Tailwind CSS for styling -->
 <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 
 <body class="bg-cyan-400 min-h-screen sm:py-12 flex items-center justify-center">
 
+<!-- This is the main container card that displays the weather information -->    
 <div class="bg-white shadow-xl rounded-2xl p-8 w-full sm:max-w-5xl">
-
 <h1 class="text-3xl font-bold text-center mb-6">Weather Dashboard</h1>
-
 <div class="flex gap-2">
 
+<!-- Input field where user enters city name -->    
 <input
 id="cityInput"
 class="border p-2 rounded w-full"
 placeholder="Enter city"
 />
 
+<!-- Button that fetches weather data for the entered city -->
 <button
 onclick="getWeather()"
 class="bg-blue-600 text-white px-4 rounded hover:bg-blue-700"
@@ -32,8 +32,10 @@ Search
 
 </div>
 
+<!-- Weather results will be dynamically inserted here -->
 <div id="weatherResult" class="mt-6 text-center"></div>
 
+<!-- Button that adds the current city to favorites -->
 <button
 onclick="saveFavorite()"
 class="mt-4 w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
@@ -41,14 +43,12 @@ class="mt-4 w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
 Save to Favorites
 </button>
 
+<!-- Code relating to the favorites list section -->
 <div class="mt-6">
-
 <h2 class="font-semibold text-lg mb-2">Favorite Cities</h2>
-
 <ul id="favorites" class="space-y-2"></ul>
 
 </div>
-
 </div>
 
 <script src="script.js"></script>
